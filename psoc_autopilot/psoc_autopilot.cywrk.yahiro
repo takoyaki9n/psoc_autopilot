@@ -13,15 +13,19 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc_autopilot\psoc_autopilot\psoc_autopilot.cydwr">
 <ExpandedNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot\TopDesign.cysch</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot.cydwr</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files</v>
+<v>psoc_autopilot\psoc_autopilot\Header Files\common.h</v>
+<v>psoc_autopilot\psoc_autopilot\Header Files\sensor.h</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files</v>
+<v>psoc_autopilot\psoc_autopilot\Source Files\common.c</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files\main.c</v>
+<v>psoc_autopilot\psoc_autopilot\Source Files\sensor.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot</v>
@@ -43,6 +47,23 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\KeilStart.a51</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.inc</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_BOOT.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_INT.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_MASTER.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_PVT.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_SLAVE.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1\SCL_1.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1\SCL_1.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1\SCL_1_aliases.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1_aliases.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevice.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevice_trm.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevicekeil.inc</v>
@@ -60,8 +81,12 @@
 <v>psoc_autopilot\psoc_autopilot\TopDesign.cysch</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot.cydwr</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files</v>
+<v>psoc_autopilot\psoc_autopilot\Header Files\common.h</v>
+<v>psoc_autopilot\psoc_autopilot\Header Files\sensor.h</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files</v>
+<v>psoc_autopilot\psoc_autopilot\Source Files\common.c</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files\main.c</v>
+<v>psoc_autopilot\psoc_autopilot\Source Files\sensor.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot</v>
@@ -83,11 +108,7 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\KeilStart.a51</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.inc</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevice.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevice_trm.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevicekeil.inc</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydevicekeil_trm.inc</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cydisabledsheets.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -112,6 +133,7 @@
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\common.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -121,8 +143,17 @@
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_INT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_SLAVE.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\KeilStart.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\main.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SCL_1.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SDA_1.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\sensor.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.elf</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.hex</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.map</v>
@@ -132,6 +163,34 @@
 <VisibleNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\common.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyLib.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cymem.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_INT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\KeilStart.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\main.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SCL_1.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SDA_1.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\sensor.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.elf</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.hex</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\psoc_autopilot.map</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot.rpt</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot_timing.html</v>
 </VisibleNodeIds>
@@ -148,6 +207,8 @@
 <v>psoc_autopilot\psoc_autopilot\PSoC 3 Architecture TRM</v>
 <v>psoc_autopilot\psoc_autopilot\CY8C38 Family Datasheet</v>
 <v>psoc_autopilot\psoc_autopilot\System Reference Guide v4_10</v>
+<v>psoc_autopilot\psoc_autopilot\cy_pins_v2_0</v>
+<v>psoc_autopilot\psoc_autopilot\I2C_v3_30</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc_autopilot</v>
@@ -155,6 +216,8 @@
 <v>psoc_autopilot\psoc_autopilot\PSoC 3 Architecture TRM</v>
 <v>psoc_autopilot\psoc_autopilot\CY8C38 Family Datasheet</v>
 <v>psoc_autopilot\psoc_autopilot\System Reference Guide v4_10</v>
+<v>psoc_autopilot\psoc_autopilot\cy_pins_v2_0</v>
+<v>psoc_autopilot\psoc_autopilot\I2C_v3_30</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

@@ -10,14 +10,19 @@
  * ========================================
 */
 #include <project.h>
+#include "common.h"
+#include "sensor.h"
 
 int main()
 {
+	float acc[3], gyr[3], mag[3];	
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
-    /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
+	CyGlobalIntEnable;
+	initSensors();
     for(;;)
     {
+		GetAccData(acc);
+		GetGyrData(gyr);
         /* Place your application code here. */
     }
 }

@@ -1,3 +1,10 @@
 psoc_autopilot/psoc_autopilot.cydsn/DP8051/
 psoc_autopilot/psoc_autopilot.cydsn/Generated_Source/
-psoc_autopilot/psoc_autopilot.cydsn/
+
+psoc_autopilot/psoc_autopilot.cydsn/codegentemp/
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot.cycdx
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot.cyfit
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot.rpt
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot_PSoC3lib.uvopt
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot_PSoC3lib.uvproj
+psoc_autopilot/psoc_autopilot.cydsn/psoc_autopilot_timing.html
