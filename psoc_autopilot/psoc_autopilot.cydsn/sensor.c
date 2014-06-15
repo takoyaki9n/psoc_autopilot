@@ -42,7 +42,10 @@ void RegWrite(uint8 slaveAddr, uint8 addr, uint8 dat) {
 	
 	I2C_MasterClearStatus();
 	I2C_MasterWriteBuf(slaveAddr, I2Ctxbuf, 2, I2C_MODE_COMPLETE_XFER);
-	I2CWriteWait(50);//なぜI2C_TIMEOUTじゃない?
+	I2CWriteWait(I2C_TIMEOUT);
+}
+void UpdateMag(){
+    RegWrite(MAG_SLAVE_ADDR, MAG_UPDATE_REG, MAG_UPDATE_DAT);
 }
 
 void RegRead(uint8 slaveAddr, uint8 addr, uint8 cnt) {
@@ -87,19 +90,26 @@ void initSensors() {
     RegWrite(MPU_SLAVE_ADDR, ACC_CONFIG_REG, ACC_CONFIG_DAT);
     RegWrite(MPU_SLAVE_ADDR, GYR_CONFIG_REG, GYR_CONFIG_DAT);
 
-	for(i=0; i < 3; i++) {
+	for(i = 0; i < 3; i++) {
 		gyr_offset[i] = 0;
 	}
-	for(i=0; i < 10; ++i) {
+	for(i = 0; i < 10; ++i) {
 		GetGyrData(gyr_tmp);
-		for(j=0; j < 3 ;j++) {
+		for(j = 0; j < 3 ;j++) {
 			gyr_offset[j] = gyr_tmp[j] + gyr_offset[j];
 		}
 		CyDelay(100);
 	}
-	for(i=0; i < 3; i++) {
+	for(i = 0; i < 3; i++) {
 		gyr_offset[i] *= 0.1;
 	}
+}
+
+void updateSensors(float *acc, float *gyr, float *mag) {
+	GetAccData(acc);
+	GetGyrData(gyr);
+	GetMagData(mag);
+	UpdateMag();
 }
 
 /* [] END OF FILE */

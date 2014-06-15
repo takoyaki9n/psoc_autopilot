@@ -40,11 +40,13 @@
 #define ACC_CONFIG_REG 0x1C
 #define ACC_CONFIG_DAT 0x18 //range = 16g
 //磁気更新
-#define MAG_UPDATE_RED 0x0A 
+#define MAG_UPDATE_REG 0x0A 
 #define MAG_UPDATE_DAT 0x01 
+
 void GetAccData(float *dat);
 void GetGyrData(float *dat);
 void GetMagData(float *dat);
 void initSensors();
+void updateSensors(float *acc, float *gyr, float *mag);
 
 //[] END OF FILE
