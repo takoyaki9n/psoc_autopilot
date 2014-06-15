@@ -11,6 +11,7 @@
 */
 
 #include <device.h>
+#include <stdio.h>
 #include "common.h"
 #include "sensor.h"
 

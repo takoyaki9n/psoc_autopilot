@@ -20,11 +20,11 @@
 //Sensitivity
 #define GYR_SCALE (GYR_RANGE / 0x8000)
 #define ACC_SCALE (ACC_RANGE / 0x8000)
-#define MAG_SCALE (MAG_RANGE / 0x1000)
+#define MAG_SCALE (MAG_RANGE / 0x0800)
 
 //I2C 7bit slave address
 #define MPU_SLAVE_ADDR 0x68 //加速度・ジャイロ部
-#define MAG_SLAVE_ADDR 0x0A //磁気
+#define MAG_SLAVE_ADDR 0x0C //磁気
 //データの先頭のレジスタ
 #define ACC_DATA_TOP_REG 0x3B
 #define GYR_DATA_TOP_REG 0x43 //(0x3B + 0x08)
