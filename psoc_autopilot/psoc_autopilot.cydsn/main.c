@@ -13,22 +13,22 @@
 #include <project.h>
 #include "common.h"
 #include "sensor.h"
-
-CY_ISR_PROTO(ISR_MAIN);
-CY_ISR_PROTO(ISR_SENSOR);
+#include "counter.h"
 
 float acc[3], gyr[3], mag[3];
-char str[64];
-
-CY_ISR(ISR_MAIN){
-}
+int16 counter_value[COUNTERS];
 
 CY_ISR(ISR_SENSOR){
 	updateSensors(acc, gyr, mag);
 }
 
-int main()
-{
+CY_ISR(ISR_MAIN){
+	
+}
+
+int main(){
+	char str[64];
+	
 	CyGlobalIntEnable;
 	
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
@@ -38,6 +38,7 @@ int main()
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
 	initSensors();
+	initCounters();
     for(;;)
     {
 		sprintf(str, "acc: %f, %f, %f\r\n", acc[0], acc[1], acc[2]);

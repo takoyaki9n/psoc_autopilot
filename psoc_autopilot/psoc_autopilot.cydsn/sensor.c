@@ -9,7 +9,7 @@
  *
  * ========================================
 */
-
+#include <project.h>
 #include <device.h>
 #include <stdio.h>
 #include "common.h"
@@ -112,5 +112,4 @@ void updateSensors(float *acc, float *gyr, float *mag) {
 	GetMagData(mag);
 	UpdateMag();
 }
-
 /* [] END OF FILE */

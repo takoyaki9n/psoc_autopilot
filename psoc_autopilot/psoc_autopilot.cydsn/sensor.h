@@ -9,6 +9,7 @@
  *
  * ========================================
 */
+#include <project.h>
 
 #define I2C_TIMEOUT	1
 
