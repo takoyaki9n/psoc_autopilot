@@ -11,19 +11,38 @@
 */
 #include <stdio.h>
 #include <project.h>
+#include "main.h"
 #include "common.h"
 #include "sensor.h"
 #include "counter.h"
 
-float acc[3], gyr[3], mag[3];
+float acc_value[3], gyr_value[3], mag_value[3];
 int16 counter_value[COUNTERS];
 
 CY_ISR(ISR_SENSOR){
-	updateSensors(acc, gyr, mag);
+	updateSensors(acc_value, gyr_value, mag_value);
 }
 
 CY_ISR(ISR_MAIN){
+	int16 pwm_e[SERVOS];
+	int8 i;
 	
+	pwm_e[INDEX_SERVO_1] = counter_value[INDEX_COUNT_1];
+	pwm_e[INDEX_SERVO_2] = counter_value[INDEX_COUNT_2];
+	for(i = 0; i < SERVOS; i++){
+		if(pwm_e[i] < PWM_E_MIN){
+			pwm_e[i] = PWM_E_MIN;
+		}else if(pwm_e[i] > PWM_E_MAX){
+			pwm_e[i] = PWM_E_MAX;
+		}
+	}
+	PWM_1_WriteCompare(pwm_e[INDEX_SERVO_1]);
+	PWM_2_WriteCompare(pwm_e[INDEX_SERVO_2]);
+}
+
+void initPWMs(){
+	PWM_1_Start();
+	PWM_2_Start();	
 }
 
 int main(){
@@ -39,17 +58,18 @@ int main(){
 	ISR_MAIN_StartEx(ISR_MAIN);
 	initSensors();
 	initCounters();
+	initPWMs();
     for(;;)
     {
-		sprintf(str, "acc: %f, %f, %f\r\n", acc[0], acc[1], acc[2]);
+		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 		
-		sprintf(str, "gyr: %f, %f, %f\r\n", gyr[0], gyr[1], gyr[2]);
+		sprintf(str, "gyr: %f, %f, %f\r\n", gyr_value[0], gyr_value[1], gyr_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 		
-		sprintf(str, "mag: %f, %f, %f\r\n", mag[0], mag[1], mag[2]);
+		sprintf(str, "mag: %f, %f, %f\r\n", mag_value[0], mag_value[1], mag_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 		

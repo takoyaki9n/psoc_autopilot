@@ -11,6 +11,16 @@
 */
 #include <project.h>
 
+#define PWM_E_MAX 2000
+#define PWM_E_MIN 1000
+
+enum { //pwm_e インデックス
+	INDEX_SERVO_1,
+	INDEX_SERVO_2,
+	
+	SERVOS,
+};
+
 CY_ISR_PROTO(ISR_MAIN);
 CY_ISR_PROTO(ISR_SENSOR);
 
