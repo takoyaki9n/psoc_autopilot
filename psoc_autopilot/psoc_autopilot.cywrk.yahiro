@@ -13,18 +13,16 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc_autopilot\psoc_autopilot\Source Files\counter.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc_autopilot\psoc_autopilot\Generated_Source">
 <ExpandedNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot\TopDesign.cysch</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot.cydwr</v>
-<v>psoc_autopilot\psoc_autopilot\Header Files</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files\common.h</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files\counter.h</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files\main.h</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files\sensor.h</v>
-<v>psoc_autopilot\psoc_autopilot\Source Files</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files\common.c</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files\counter.c</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files\main.c</v>
@@ -185,15 +183,7 @@
 <v>psoc_autopilot\psoc_autopilot\TopDesign.cysch</v>
 <v>psoc_autopilot\psoc_autopilot\psoc_autopilot.cydwr</v>
 <v>psoc_autopilot\psoc_autopilot\Header Files</v>
-<v>psoc_autopilot\psoc_autopilot\Header Files\common.h</v>
-<v>psoc_autopilot\psoc_autopilot\Header Files\counter.h</v>
-<v>psoc_autopilot\psoc_autopilot\Header Files\main.h</v>
-<v>psoc_autopilot\psoc_autopilot\Header Files\sensor.h</v>
 <v>psoc_autopilot\psoc_autopilot\Source Files</v>
-<v>psoc_autopilot\psoc_autopilot\Source Files\common.c</v>
-<v>psoc_autopilot\psoc_autopilot\Source Files\counter.c</v>
-<v>psoc_autopilot\psoc_autopilot\Source Files\main.c</v>
-<v>psoc_autopilot\psoc_autopilot\Source Files\sensor.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1</v>
@@ -213,6 +203,14 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4_PM.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyBootAsmKeil.a51</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyDmac.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyDmac.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyFlash.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyFlash.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyLib.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyLib.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\cymem.a51</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -388,10 +386,6 @@
 <OpenDocs>
 <name v=".\psoc_autopilot.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\psoc_autopilot.cydsn\psoc_autopilot.cydwr" />
-<name v=".\psoc_autopilot.cydsn\sensor.h" />
-<name v=".\psoc_autopilot.cydsn\sensor.c" />
-<name v=".\psoc_autopilot.cydsn\common.c" />
-<name v=".\psoc_autopilot.cydsn\common.h" />
 <name v=".\psoc_autopilot.cydsn\main.c" />
 <name v=".\psoc_autopilot.cydsn\main.h" />
 <name v=".\psoc_autopilot.cydsn\counter.c" />

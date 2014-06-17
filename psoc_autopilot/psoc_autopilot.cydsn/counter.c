@@ -42,5 +42,9 @@ void initCounters(){
 	Counter_2_Start();
 	Counter_3_Start();
 	Counter_4_Start();
+	ISR_COUNT_1_StartEx(ISR_COUNT_1);
+	ISR_COUNT_2_StartEx(ISR_COUNT_2);
+	ISR_COUNT_3_StartEx(ISR_COUNT_3);
+	ISR_COUNT_4_StartEx(ISR_COUNT_4);
 }
 /* [] END OF FILE */

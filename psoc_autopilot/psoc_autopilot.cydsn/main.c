@@ -49,11 +49,11 @@ int main(){
 	char str[64];
 	
 	CyGlobalIntEnable;
-	
+#ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
 	while(!USBUART_1_GetConfiguration());
 	USBUART_1_CDC_Init();
-	
+#endif	
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
 	initSensors();
@@ -61,6 +61,7 @@ int main(){
 	initPWMs();
     for(;;)
     {
+#ifdef USB_EN	
 		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
@@ -72,7 +73,7 @@ int main(){
 		sprintf(str, "mag: %f, %f, %f\r\n", mag_value[0], mag_value[1], mag_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
-		
+#endif
 		CyDelay(1000);
         /* Place your application code here. */
     }

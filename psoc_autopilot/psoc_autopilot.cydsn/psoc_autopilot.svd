@@ -233,7 +233,7 @@
     <peripheral>
       <name>Counter_2</name>
       <description>No description available</description>
-      <baseAddress>0x6506</baseAddress>
+      <baseAddress>0x640C</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -457,7 +457,7 @@
     <peripheral>
       <name>Counter_4</name>
       <description>No description available</description>
-      <baseAddress>0x6406</baseAddress>
+      <baseAddress>0x640A</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -681,7 +681,7 @@
     <peripheral>
       <name>PWM_1</name>
       <description>No description available</description>
-      <baseAddress>0x6424</baseAddress>
+      <baseAddress>0x652A</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x72</size>
@@ -700,7 +700,7 @@
         <register>
           <name>PWM_1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x51</addressOffset>
+          <addressOffset>0x50</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1030,7 +1030,7 @@
     <peripheral>
       <name>PWM_2</name>
       <description>No description available</description>
-      <baseAddress>0x6420</baseAddress>
+      <baseAddress>0x6426</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x72</size>
@@ -2166,7 +2166,7 @@
     <peripheral>
       <name>Counter_1</name>
       <description>No description available</description>
-      <baseAddress>0x6504</baseAddress>
+      <baseAddress>0x640E</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
