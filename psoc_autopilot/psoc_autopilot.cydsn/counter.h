@@ -12,20 +12,18 @@
 #include <project.h>
 
 enum { //counter_value インデックス
-	INDEX_COUNT_1,
-	INDEX_COUNT_2,
-	INDEX_COUNT_3,
-	INDEX_COUNT_4,
+	COUNTER_THR,
+	COUNTER_ELV,
+	COUNTER_RUD,
 	
 	COUNTERS,
 };
 
 void initCounters();
 
-CY_ISR_PROTO(ISR_COUNT_1);
-CY_ISR_PROTO(ISR_COUNT_2);
-CY_ISR_PROTO(ISR_COUNT_3);
-CY_ISR_PROTO(ISR_COUNT_4);
+CY_ISR_PROTO(ISR_THR);
+CY_ISR_PROTO(ISR_ELV);
+CY_ISR_PROTO(ISR_RUD);
 
 extern int16 counter_value[COUNTERS];
 /* [] END OF FILE */

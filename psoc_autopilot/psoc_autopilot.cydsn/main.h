@@ -16,10 +16,11 @@
 #define PWM_E_MIN 1000
 
 enum { //pwm_e インデックス
-	INDEX_SERVO_1,
-	INDEX_SERVO_2,
+	PWM_THR,
+	PWM_ELV,
+	PWM_RUD,
 	
-	SERVOS,
+	PWMS
 };
 
 CY_ISR_PROTO(ISR_MAIN);

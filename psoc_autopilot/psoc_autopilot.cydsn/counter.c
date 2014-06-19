@@ -12,25 +12,20 @@
 #include <project.h>
 #include "counter.h"
 
-CY_ISR(ISR_COUNT_1){
-	counter_value[INDEX_COUNT_1] = Counter_1_ReadCapture();
+CY_ISR(ISR_THR){
+	counter_value[COUNTER_THR] = Counter_Thr_ReadCapture();
 	//割り込みフラグクリア
-	Counter_1_ReadStatusRegister();
+	Counter_Thr_ReadStatusRegister();
 }
-CY_ISR(ISR_COUNT_2){
-	counter_value[INDEX_COUNT_2] = Counter_2_ReadCapture();
+CY_ISR(ISR_ELV){
+	counter_value[COUNTER_ELV] = Counter_Elv_ReadCapture();
 	//割り込みフラグクリア
-	Counter_2_ReadStatusRegister();
+	Counter_Elv_ReadStatusRegister();
 }
-CY_ISR(ISR_COUNT_3){
-	counter_value[INDEX_COUNT_3] = Counter_3_ReadCapture();
+CY_ISR(ISR_RUD){
+	counter_value[COUNTER_RUD] = Counter_Rud_ReadCapture();
 	//割り込みフラグクリア
-	Counter_3_ReadStatusRegister();
-}
-CY_ISR(ISR_COUNT_4){
-	counter_value[INDEX_COUNT_4] = Counter_4_ReadCapture();
-	//割り込みフラグクリア
-	Counter_4_ReadStatusRegister();
+	Counter_Rud_ReadStatusRegister();
 }
 
 void initCounters(){
@@ -38,13 +33,11 @@ void initCounters(){
 	for(i = 0; i < COUNTERS; i++){
 		counter_value[i] = 0;	
 	}
-	Counter_1_Start();
-	Counter_2_Start();
-	Counter_3_Start();
-	Counter_4_Start();
-	ISR_COUNT_1_StartEx(ISR_COUNT_1);
-	ISR_COUNT_2_StartEx(ISR_COUNT_2);
-	ISR_COUNT_3_StartEx(ISR_COUNT_3);
-	ISR_COUNT_4_StartEx(ISR_COUNT_4);
+	Counter_Thr_Start();
+	Counter_Elv_Start();
+	Counter_Rud_Start();
+	ISR_Thr_StartEx(ISR_THR);
+	ISR_Elv_StartEx(ISR_ELV);
+	ISR_Rud_StartEx(ISR_RUD);
 }
 /* [] END OF FILE */

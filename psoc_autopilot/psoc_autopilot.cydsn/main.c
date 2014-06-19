@@ -24,25 +24,28 @@ CY_ISR(ISR_SENSOR){
 }
 
 CY_ISR(ISR_MAIN){
-	int16 pwm_e[SERVOS];
+	int16 pwm_e[PWMS];
 	int8 i;
 	
-	pwm_e[INDEX_SERVO_1] = counter_value[INDEX_COUNT_1];
-	pwm_e[INDEX_SERVO_2] = counter_value[INDEX_COUNT_2];
-	for(i = 0; i < SERVOS; i++){
+	pwm_e[PWM_THR] = counter_value[COUNTER_THR];
+	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV];
+	pwm_e[PWM_RUD] = counter_value[COUNTER_RUD];
+	for(i = 0; i < PWMS; i++){
 		if(pwm_e[i] < PWM_E_MIN){
 			pwm_e[i] = PWM_E_MIN;
 		}else if(pwm_e[i] > PWM_E_MAX){
 			pwm_e[i] = PWM_E_MAX;
 		}
 	}
-	PWM_1_WriteCompare(pwm_e[INDEX_SERVO_1]);
-	PWM_2_WriteCompare(pwm_e[INDEX_SERVO_2]);
+	PWM_Thr_WriteCompare(pwm_e[PWM_THR]);
+	PWM_Elv_WriteCompare(pwm_e[PWM_ELV]);
+	PWM_Rud_WriteCompare(pwm_e[PWM_RUD]);
 }
 
 void initPWMs(){
-	PWM_1_Start();
-	PWM_2_Start();	
+	PWM_Thr_Start();
+	PWM_Elv_Start();	
+	PWM_Rud_Start();	
 }
 
 int main(){

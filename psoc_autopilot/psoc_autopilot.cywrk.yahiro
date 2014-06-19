@@ -29,22 +29,18 @@
 <v>psoc_autopilot\psoc_autopilot\Source Files\sensor.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr_PM.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyBootAsmKeil.a51</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyDmac.c</v>
@@ -64,6 +60,14 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\KeilStart.a51</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\PSoC3_8051.inc</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_In</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_In\Elv_In.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_In\Elv_In.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_In\Elv_In_aliases.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_Out</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_Out\Elv_Out.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_Out\Elv_Out.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Elv_Out\Elv_Out_aliases.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C.h</v>
@@ -73,59 +77,47 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_PM.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_PVT.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\I2C\I2C_SLAVE.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_1\ISR_COUNT_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_1\ISR_COUNT_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_2\ISR_COUNT_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_2\ISR_COUNT_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_3\ISR_COUNT_3.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_3\ISR_COUNT_3.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_4</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_4\ISR_COUNT_4.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_COUNT_4\ISR_COUNT_4.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Elv</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Elv\ISR_Elv.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Elv\ISR_Elv.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_MAIN</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_MAIN\ISR_MAIN.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_MAIN\ISR_MAIN.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Rud</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Rud\ISR_Rud.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Rud\ISR_Rud.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_SENSOR</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_SENSOR\ISR_SENSOR.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_SENSOR\ISR_SENSOR.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Thr</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Thr\ISR_Thr.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\ISR_Thr\ISR_Thr.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\main_timer</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\main_timer\main_timer.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\main_timer\main_timer.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWD_ConutUp</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWD_ConutUp\PWD_ConutUp.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWD_ConutUp\PWD_ConutUp.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_1\PWM_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_1\PWM_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_1\PWM_1_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_2\PWM_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_2\PWM_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_2\PWM_2_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_1\PWM_OUT_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_1\PWM_OUT_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_1\PWM_OUT_1_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_2\PWM_OUT_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_2\PWM_OUT_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_OUT_2\PWM_OUT_2_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_1\RCVR_INPUT_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_1\RCVR_INPUT_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_1\RCVR_INPUT_1_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_2\RCVR_INPUT_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_2\RCVR_INPUT_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_2\RCVR_INPUT_2_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_3\RCVR_INPUT_3.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_3\RCVR_INPUT_3.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_3\RCVR_INPUT_3_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_4</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_4\RCVR_INPUT_4.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_4\RCVR_INPUT_4.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\RCVR_INPUT_4\RCVR_INPUT_4_aliases.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Elv</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Elv\PWM_Elv.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Elv\PWM_Elv.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Elv\PWM_Elv_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Rud</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Rud\PWM_Rud.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Rud\PWM_Rud.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Rud\PWM_Rud_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Thr</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Thr\PWM_Thr.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Thr\PWM_Thr.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\PWM_Thr\PWM_Thr_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_In</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_In\Rud_In.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_In\Rud_In.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_In\Rud_In_aliases.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_Out</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_Out\Rud_Out.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_Out\Rud_Out.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Rud_Out\Rud_Out_aliases.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1\SCL_1.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SCL_1\SCL_1.h</v>
@@ -134,9 +126,14 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\SDA_1\SDA_1_aliases.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\timer</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\timer\timer.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\timer\timer.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_In</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_In\Thr_In.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_In\Thr_In.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_In\Thr_In_aliases.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_Out</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_Out\Thr_Out.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_Out\Thr_Out.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Thr_Out\Thr_Out_aliases.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\USBUART_1</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\USBUART_1\USBUART_1.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\USBUART_1\USBUART_1.h</v>
@@ -186,22 +183,18 @@
 <v>psoc_autopilot\psoc_autopilot\Source Files</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_1\Counter_1_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_2\Counter_2_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_3\Counter_3_PM.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4.c</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4.h</v>
-<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_4\Counter_4_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Elv\Counter_Elv_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Rud\Counter_Rud_PM.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\Counter_Thr\Counter_Thr_PM.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyBootAsmKeil.a51</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyDmac.c</v>
@@ -211,6 +204,10 @@
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyLib.c</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CyLib.h</v>
 <v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\cymem.a51</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\cypins.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\cyPm.c</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\cyPm.h</v>
+<v>psoc_autopilot\psoc_autopilot\Generated_Source\PSoC3\cy_boot\CySpc.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -237,14 +234,12 @@
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\common.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\counter.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_1_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_2_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_3.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_3_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_4.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_4_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Elv.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Elv_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Rud.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Rud_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Thr.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Thr_PM.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -254,35 +249,36 @@
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Elv_In.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Elv_Out.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_BOOT.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_INT.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_MASTER.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_PM.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_3.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_4.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_Elv.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_MAIN.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_Rud.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_SENSOR.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_Thr.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\KeilStart.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\main.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\main_timer.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWD_ConutUp.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_1_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_2_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_OUT_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_OUT_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\RCVR_INPUT_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\RCVR_INPUT_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\RCVR_INPUT_3.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\RCVR_INPUT_4.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Elv.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Elv_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Rud.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Rud_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Thr.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\PWM_Thr_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Rud_In.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Rud_Out.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SCL_1.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\SDA_1.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\sensor.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\timer.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Thr_In.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Thr_Out.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\USBUART_1.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\USBUART_1_audio.lst</v>
 <v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\USBUART_1_boot.lst</v>
@@ -307,37 +303,6 @@
 <VisibleNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\common.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\counter.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_1_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_2.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_2_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_3.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_3_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_4.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_4_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyFlash.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyLib.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cymem.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_BOOT.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_INT.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_MASTER.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_PM.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_1.lst</v>
-<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\ISR_COUNT_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -354,6 +319,7 @@
 <v>psoc_autopilot\psoc_autopilot\System Reference Guide v4_10</v>
 <v>psoc_autopilot\psoc_autopilot\Counter_v2_40</v>
 <v>psoc_autopilot\psoc_autopilot\cy_clock_v2_20</v>
+<v>psoc_autopilot\psoc_autopilot\cy_constant_v1_0</v>
 <v>psoc_autopilot\psoc_autopilot\cy_isr_v1_70</v>
 <v>psoc_autopilot\psoc_autopilot\cy_pins_v2_0</v>
 <v>psoc_autopilot\psoc_autopilot\I2C_v3_30</v>
@@ -369,6 +335,7 @@
 <v>psoc_autopilot\psoc_autopilot\System Reference Guide v4_10</v>
 <v>psoc_autopilot\psoc_autopilot\Counter_v2_40</v>
 <v>psoc_autopilot\psoc_autopilot\cy_clock_v2_20</v>
+<v>psoc_autopilot\psoc_autopilot\cy_constant_v1_0</v>
 <v>psoc_autopilot\psoc_autopilot\cy_isr_v1_70</v>
 <v>psoc_autopilot\psoc_autopilot\cy_pins_v2_0</v>
 <v>psoc_autopilot\psoc_autopilot\I2C_v3_30</v>
