@@ -27,9 +27,7 @@ float Byte2float(uint8 msb, uint8 lsb) {
 float Deg2Rad(float deg) {
 	return deg * (3.14159 / 180.0);
 }
-//uint32 GetTime(){
-//	return global_time_counter;
-//}
+
 void IntToString(char *str, int number){
 	sprintf(str, "%d", number);
 }

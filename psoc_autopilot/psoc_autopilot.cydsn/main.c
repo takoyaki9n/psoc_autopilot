@@ -48,9 +48,7 @@ void initPWMs(){
 	PWM_Rud_Start();	
 }
 
-int main(){
-	char str[64];
-	
+void init(){
 	CyGlobalIntEnable;
 #ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
@@ -62,8 +60,15 @@ int main(){
 	initSensors();
 	initCounters();
 	initPWMs();
-    for(;;)
-    {
+	Timer_Global_Start();	
+}
+
+int main(){
+	char str[64];
+	
+	init();
+	
+	for(;;){
 #ifdef USB_EN	
 		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
