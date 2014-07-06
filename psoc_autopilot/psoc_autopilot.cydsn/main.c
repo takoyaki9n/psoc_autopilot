@@ -54,13 +54,13 @@ void init(){
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
 	while(!USBUART_1_GetConfiguration());
 	USBUART_1_CDC_Init();
-#endif	
+#endif
+	Timer_Global_Start();
+	initSensors();
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
-	initSensors();
-	initCounters();
-	initPWMs();
-	Timer_Global_Start();	
+//	initCounters();
+//	initPWMs();
 }
 
 int main(){
