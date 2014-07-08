@@ -25,7 +25,7 @@ float gyr_offset[3];
 
 void I2CWait(uint16 timeout, uint8 flagToWaitOn) {
 	uint16 cnt = 0;
-//	timeout += Timer_Global_ReadCounter();
+	timeout += Timer_Global_ReadCounter();
 	while(!(I2C_MasterStatus() & flagToWaitOn) && cnt <= timeout){//&& Timer_Global_ReadCounter() <= timeout);
 		cnt++;
 		CyDelay(1);
