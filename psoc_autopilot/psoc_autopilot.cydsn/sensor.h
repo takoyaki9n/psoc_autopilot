@@ -11,18 +11,16 @@
 */
 #include <project.h>
 
-#define I2C_TIMEOUT	1
+#define I2C_TIMEOUT	100
 
 //Fullscale range
 #define GYR_RANGE 2000.0 //dps
 #define ACC_RANGE 16.0   //g
 #define MAG_RANGE 1200.0 //uT
-
 //Sensitivity
 #define GYR_SCALE (GYR_RANGE / 0x8000)
 #define ACC_SCALE (ACC_RANGE / 0x8000)
 #define MAG_SCALE (MAG_RANGE / 0x0800)
-
 //I2C 7bit slave address
 #define MPU_SLAVE_ADDR 0x68 //加速度・ジャイロ部
 #define MAG_SLAVE_ADDR 0x0C //磁気

@@ -16,6 +16,7 @@
 #include "sensor.h"
 #include "counter.h"
 
+extern uint32 dt;
 float acc_value[3], gyr_value[3], mag_value[3];
 int16 counter_value[COUNTERS];
 
@@ -23,7 +24,6 @@ CY_ISR(ISR_SENSOR){
 	updateSensors(acc_value, gyr_value, mag_value);
 }
 
-	int8 cnt = 0;
 CY_ISR(ISR_MAIN){
 	int16 pwm_e[PWMS];
 	int8 i;
@@ -50,18 +50,25 @@ void initPWMs(){
 }
 
 void init(){
+	Init_LED_Out_Write(1);
+	//電源投入直後は待つ
+	CyDelay(1000);
+	Init_LED_Out_Write(0);
+	CyDelay(100);
+	Init_LED_Out_Write(1);
 	CyGlobalIntEnable;
 #ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
 	while(!USBUART_1_GetConfiguration());
 	USBUART_1_CDC_Init();
 #endif
-//	Timer_Global_Start();
+	Timer_Global_Start();
 	initSensors();
 	initCounters();
 	initPWMs();
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
+	Init_LED_Out_Write(0);
 }
 
 int main(){

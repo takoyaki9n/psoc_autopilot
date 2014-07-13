@@ -23,18 +23,20 @@ uint8 I2Crxbuf[I2C_RXBUFSIZE];
 
 float gyr_offset[3];
 
-void I2CWait(uint16 timeout, uint8 flagToWaitOn) {
-	uint16 cnt = 0;
-	timeout += Timer_Global_ReadCounter();
-	while(!(I2C_MasterStatus() & flagToWaitOn) && cnt <= timeout){//&& Timer_Global_ReadCounter() <= timeout);
-		cnt++;
-		CyDelay(1);
-	}
+//デバッグ用
+int16 cnt;
+uint32 dt;
+
+void I2CWait(uint32 timeout, uint8 flagToWaitOn) {
+	dt = Timer_Global_ReadCounter();
+	timeout = Timer_Global_ReadCounter() - timeout;
+	while(!(I2C_MasterStatus() & flagToWaitOn) && timeout <= Timer_Global_ReadCounter());
+	dt = dt - Timer_Global_ReadCounter();
 }
-void I2CReadWait(uint16 timeout) {
+void I2CReadWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_RD_CMPLT);
 }
-void I2CWriteWait(uint16 timeout) {
+void I2CWriteWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_WR_CMPLT);
 }
 
