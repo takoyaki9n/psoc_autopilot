@@ -9,12 +9,14 @@
  *
  * ========================================
 */
+
 #include <stdio.h>
 #include <project.h>
 #include "main.h"
 #include "common.h"
 #include "sensor.h"
 #include "counter.h"
+#include "MadgwickAHRS.h"
 
 extern uint32 dt;
 float acc_value[3], gyr_value[3], mag_value[3];
@@ -27,7 +29,7 @@ CY_ISR(ISR_SENSOR){
 CY_ISR(ISR_MAIN){
 	int16 pwm_e[PWMS];
 	int8 i;
-
+	
 	pwm_e[PWM_THR] = counter_value[COUNTER_THR];
 	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV];
 	pwm_e[PWM_RUD] = counter_value[COUNTER_RUD];
