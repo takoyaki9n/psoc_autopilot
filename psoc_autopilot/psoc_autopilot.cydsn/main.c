@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>
+#include <math.h>
 #include <project.h>
 #include "main.h"
 #include "common.h"
@@ -18,12 +19,20 @@
 #include "counter.h"
 #include "MadgwickAHRS.h"
 
-extern uint32 dt;
 float acc_value[3], gyr_value[3], mag_value[3];
+float psy, phi, theta;
 int16 counter_value[COUNTERS];
+extern uint32 dt;
 
 CY_ISR(ISR_SENSOR){
 	updateSensors(acc_value, gyr_value, mag_value);
+	
+//	MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]);	
+	MadgwickAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]);
+	
+	psy = atan2(2 * (q1 * q2 - q0 * q3), 2 * (q0 * q0 + q1 * q1) - 1) / 3.14 * 180;
+	theta = - asin(2 * (q1 * q3 + q0 * q3))                           / 3.14 * 180;
+	phi = atan2(2 * (q2 * q3 - q0 * q1), 2 * (q0 * q0 + q3 * q3) - 1) / 3.14 * 180;
 }
 
 CY_ISR(ISR_MAIN){
@@ -58,16 +67,17 @@ void init(){
 	Init_LED_Out_Write(0);
 	CyDelay(100);
 	Init_LED_Out_Write(1);
+	
 	CyGlobalIntEnable;
+#ifdef USB_EN	
+	USBUART_1_Start(0, USBUART_1_DWR_VDDD_OPERATION);
+	while(!USBUART_1_GetConfiguration());
+	USBUART_1_CDC_Init();
+#endif
 	Timer_Global_Start();
 	initSensors();
 	initCounters();
 	initPWMs();
-#ifdef USB_EN	
-	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
-	while(!USBUART_1_GetConfiguration());
-	USBUART_1_CDC_Init();
-#endif
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
 	Init_LED_Out_Write(0);
@@ -79,7 +89,7 @@ int main(){
 	init();
 	
 	for(;;){
-#ifdef USB_EN	
+#ifdef USB_EN
 		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
@@ -89,6 +99,10 @@ int main(){
 		USBUART_1_PutString(str);
 		
 		sprintf(str, "mag: %f, %f, %f\r\n", mag_value[0], mag_value[1], mag_value[2]);
+		while(USBUART_1_CDCIsReady() == 0u);
+		USBUART_1_PutString(str);
+		
+		sprintf(str, "ang: %f, %f, %f\r\n\r\n", psy, phi, theta);
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 #endif

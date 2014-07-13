@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc_autopilot\psoc_autopilot\Source Files\MadgwickAHRS.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc_autopilot\psoc_autopilot\Header Files\sensor.h">
 <ExpandedNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
@@ -427,6 +427,9 @@
 <name v=".\psoc_autopilot.cydsn\common.c" />
 <name v=".\psoc_autopilot.cydsn\sensor.c" />
 <name v=".\psoc_autopilot.cydsn\main.h" />
+<name v=".\psoc_autopilot.cydsn\MadgwickAHRS.h" />
+<name v=".\psoc_autopilot.cydsn\MadgwickAHRS.c" />
+<name v=".\psoc_autopilot.cydsn\sensor.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

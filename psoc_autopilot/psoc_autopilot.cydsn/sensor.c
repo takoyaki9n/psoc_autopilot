@@ -24,14 +24,11 @@ uint8 I2Crxbuf[I2C_RXBUFSIZE];
 float gyr_offset[3];
 
 //デバッグ用
-int16 cnt;
-uint32 dt;
+volatile uint32 dt;
 
 void I2CWait(uint32 timeout, uint8 flagToWaitOn) {
-	dt = Timer_Global_ReadCounter();
 	timeout = Timer_Global_ReadCounter() - timeout;
 	while(!(I2C_MasterStatus() & flagToWaitOn) && timeout <= Timer_Global_ReadCounter());
-	dt = dt - Timer_Global_ReadCounter();
 }
 void I2CReadWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_RD_CMPLT);
@@ -110,9 +107,11 @@ void initSensors() {
 }
 
 void updateSensors(float *acc, float *gyr, float *mag) {
+	dt = Timer_Global_ReadCounter();
 	GetAccData(acc);
 	GetGyrData(gyr);
 	GetMagData(mag);
+	dt = dt - Timer_Global_ReadCounter();
 	UpdateMag();
 }
 /* [] END OF FILE */
