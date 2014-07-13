@@ -57,15 +57,15 @@ void init(){
 	CyDelay(100);
 	Init_LED_Out_Write(1);
 	CyGlobalIntEnable;
+	Timer_Global_Start();
+	initSensors();
+	initCounters();
+	initPWMs();
 #ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_3V_OPERATION);
 	while(!USBUART_1_GetConfiguration());
 	USBUART_1_CDC_Init();
 #endif
-	Timer_Global_Start();
-	initSensors();
-	initCounters();
-	initPWMs();
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
 	Init_LED_Out_Write(0);
