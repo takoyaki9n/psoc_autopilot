@@ -61,13 +61,16 @@ void initPWMs(){
 }
 
 void init(){
-	Init_LED_Out_Write(1);
+	int i;
 	//電源投入直後は待つ
-	CyDelay(1000);
-	Init_LED_Out_Write(0);
-	CyDelay(100);
-	Init_LED_Out_Write(1);
+	for(i = 0; i < 2; i++){
+		Init_LED_Out_Write(1);
+		CyDelay(500);
+		Init_LED_Out_Write(0);
+		CyDelay(500);
+	}
 	
+	Init_LED_Out_Write(1);
 	CyGlobalIntEnable;
 #ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_DWR_VDDD_OPERATION);
@@ -80,6 +83,7 @@ void init(){
 	initPWMs();
 	ISR_SENSOR_StartEx(ISR_SENSOR);
 	ISR_MAIN_StartEx(ISR_MAIN);
+	Counters_StartEx();
 	Init_LED_Out_Write(0);
 }
 
