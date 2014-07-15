@@ -25,6 +25,8 @@ float gyr_offset[3];
 
 //デバッグ用
 volatile uint32 dt;
+//	dt = Timer_Global_ReadCounter();
+//	dt -= Timer_Global_ReadCounter();
 
 //timeoutはusec
 void I2CWait(uint32 timeout, uint8 flagToWaitOn) {
@@ -111,9 +113,9 @@ void initSensors() {
 }
 
 void updateSensors(float *acc, float *gyr, float *mag) {
-	GetAccData(acc);
-	GetGyrData(gyr);
-	GetMagData(mag);
+	GetAccData(acc); //540 usec
+	GetGyrData(gyr); //690 usec
+	GetMagData(mag); //550 usec
 	UpdateMag();
 }
 /* [] END OF FILE */

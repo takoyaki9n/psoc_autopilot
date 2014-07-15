@@ -111,7 +111,6 @@ int main(){
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 #endif
-        /* Place your application code here. */
     }
 }
 
