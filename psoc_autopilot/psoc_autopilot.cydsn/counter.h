@@ -20,6 +20,7 @@ enum { //counter_value インデックス
 };
 
 void initCounters();
+void Counters_StartEx();
 
 CY_ISR_PROTO(ISR_THR);
 CY_ISR_PROTO(ISR_ELV);
