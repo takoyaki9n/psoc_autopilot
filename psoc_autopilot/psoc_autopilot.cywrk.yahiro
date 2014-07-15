@@ -327,6 +327,36 @@
 <VisibleNodeIds>
 <v>psoc_autopilot</v>
 <v>psoc_autopilot\psoc_autopilot</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Clock_Main.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Clock_Timer.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\common.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\counter.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Elv.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Elv_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Rud.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Rud_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Thr.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Counter_Thr_PM.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CyLib.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cymem.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Elv_In.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\Elv_Out.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_INT.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>psoc_autopilot\psoc_autopilot\DP8051\DP8051_Keil_951\Debug\Listing Files\I2C_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

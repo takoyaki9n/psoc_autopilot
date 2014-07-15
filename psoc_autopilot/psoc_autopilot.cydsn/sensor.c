@@ -26,14 +26,17 @@ float gyr_offset[3];
 //デバッグ用
 volatile uint32 dt;
 
+//timeoutはusec
 void I2CWait(uint32 timeout, uint8 flagToWaitOn) {
 	uint32 time = Timer_Global_ReadCounter();
 	//タイマーがアンダーフローしても動くように毎回引き算する
 	while(!(I2C_MasterStatus() & flagToWaitOn) && time - Timer_Global_ReadCounter() <= timeout);
 }
+//timeoutはusec
 void I2CReadWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_RD_CMPLT);
 }
+//timeoutはusec
 void I2CWriteWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_WR_CMPLT);
 }

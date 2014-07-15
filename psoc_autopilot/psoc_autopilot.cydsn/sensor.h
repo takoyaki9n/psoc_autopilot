@@ -11,7 +11,7 @@
 */
 #include <project.h>
 
-#define I2C_TIMEOUT	1
+#define I2C_TIMEOUT	1000
 
 //Fullscale range
 #define GYR_RANGE 2000.0 //dps
