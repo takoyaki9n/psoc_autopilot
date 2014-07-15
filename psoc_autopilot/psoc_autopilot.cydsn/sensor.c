@@ -27,8 +27,9 @@ float gyr_offset[3];
 volatile uint32 dt;
 
 void I2CWait(uint32 timeout, uint8 flagToWaitOn) {
-	timeout = Timer_Global_ReadCounter() - timeout;
-	while(!(I2C_MasterStatus() & flagToWaitOn) && timeout <= Timer_Global_ReadCounter());
+	uint32 time = Timer_Global_ReadCounter();
+	//タイマーがアンダーフローしても動くように毎回引き算する
+	while(!(I2C_MasterStatus() & flagToWaitOn) && time - Timer_Global_ReadCounter() <= timeout);
 }
 void I2CReadWait(uint32 timeout) {
 	I2CWait(timeout, I2C_MSTAT_RD_CMPLT);
@@ -107,11 +108,9 @@ void initSensors() {
 }
 
 void updateSensors(float *acc, float *gyr, float *mag) {
-	dt = Timer_Global_ReadCounter();
 	GetAccData(acc);
 	GetGyrData(gyr);
 	GetMagData(mag);
-	dt = dt - Timer_Global_ReadCounter();
 	UpdateMag();
 }
 /* [] END OF FILE */

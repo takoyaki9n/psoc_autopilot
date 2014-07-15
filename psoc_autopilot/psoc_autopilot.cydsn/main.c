@@ -93,6 +93,7 @@ int main(){
 	init();
 	
 	for(;;){
+		CyDelay(1000);
 #ifdef USB_EN
 		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
 		while(USBUART_1_CDCIsReady() == 0u);
@@ -110,7 +111,6 @@ int main(){
 		while(USBUART_1_CDCIsReady() == 0u);
 		USBUART_1_PutString(str);
 #endif
-		CyDelay(1000);
         /* Place your application code here. */
     }
 }
