@@ -29,10 +29,6 @@ CY_ISR(ISR_SENSOR){
 	
 //	MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]);	
 	MadgwickAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]);
-	
-	psy = atan2(2 * (q1 * q2 - q0 * q3), 2 * (q0 * q0 + q1 * q1) - 1) / 3.14 * 180;
-	theta = - asin(2 * (q1 * q3 + q0 * q3))                           / 3.14 * 180;
-	phi = atan2(2 * (q2 * q3 - q0 * q1), 2 * (q0 * q0 + q3 * q3) - 1) / 3.14 * 180;
 }
 
 CY_ISR(ISR_MAIN){
@@ -89,29 +85,48 @@ void init(){
 
 int main(){
 	char str[64];
+	float qbuf[4];
 	
 	init();
 	
 	for(;;){
-		CyDelay(1000);
+		CyDelay(100);
+		Init_LED_Out_Write(1);
 #ifdef USB_EN
-		sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
-		while(USBUART_1_CDCIsReady() == 0u);
-		USBUART_1_PutString(str);
-		
-		sprintf(str, "gyr: %f, %f, %f\r\n", gyr_value[0], gyr_value[1], gyr_value[2]);
-		while(USBUART_1_CDCIsReady() == 0u);
-		USBUART_1_PutString(str);
-		
-		sprintf(str, "mag: %f, %f, %f\r\n", mag_value[0], mag_value[1], mag_value[2]);
-		while(USBUART_1_CDCIsReady() == 0u);
-		USBUART_1_PutString(str);
-		
-		sprintf(str, "ang: %f, %f, %f\r\n\r\n", psy, phi, theta);
-		while(USBUART_1_CDCIsReady() == 0u);
-		USBUART_1_PutString(str);
+		if (UARTWait(UART_TIMEOUT)){
+			qbuf[0] = q0; qbuf[1] = q1; qbuf[2] = q2; qbuf[3] = q3;
+			USBUART_1_PutData(qbuf, 16);
+		}
+		if (UARTWait(UART_TIMEOUT)){
+			USBUART_1_PutCRLF();
+		}
+/*		
+		if (UARTWait(UART_TIMEOUT)){
+			sprintf(str, "acc: %f, %f, %f\r\n", acc_value[0], acc_value[1], acc_value[2]);
+			USBUART_1_PutString(str);
+		}
+		if (UARTWait(UART_TIMEOUT)){
+			sprintf(str, "gyr: %f, %f, %f\r\n", gyr_value[0], gyr_value[1], gyr_value[2]);
+			USBUART_1_PutString(str);
+		}
+		if (UARTWait(UART_TIMEOUT)){
+			sprintf(str, "mag: %f, %f, %f\r\n", mag_value[0], mag_value[1], mag_value[2]);
+			USBUART_1_PutString(str);
+		}
+		if (UARTWait(UART_TIMEOUT)){
+			sprintf(str, "ang: %f, %f, %f\r\n\r\n", psy, phi, theta);
+			USBUART_1_PutString(str);
+		}*/
 #endif
+		Init_LED_Out_Write(0);
     }
+}
+
+int UARTWait(uint32 timeout){
+	uint32 time = Timer_Global_ReadCounter();
+	//タイマーがアンダーフローしても動くように毎回引き算する
+	while(USBUART_1_CDCIsReady() == 0u && time - Timer_Global_ReadCounter() <= timeout);
+	return USBUART_1_CDCIsReady() != 0u;
 }
 
 /* [] END OF FILE */

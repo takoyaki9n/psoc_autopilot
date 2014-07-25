@@ -24,7 +24,7 @@ uint8 I2Crxbuf[I2C_RXBUFSIZE];
 float gyr_offset[3];
 
 //デバッグ用
-volatile uint32 dt;
+uint32 dt;
 //	dt = Timer_Global_ReadCounter();
 //	dt -= Timer_Global_ReadCounter();
 

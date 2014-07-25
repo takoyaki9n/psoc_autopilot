@@ -34,6 +34,13 @@ void IntToString(char *str, int number){
 void FloatToString(char *str, float number){
 	sprintf(str, "%f", number);
 }
+
+uint32 FloatToUint32(float value){
+	uint32 *p;
+	p = (uint32 *) &value;
+	return *p;
+}
+
 int maxInt(int x, int y){
     return x > y ? x : y;
 }

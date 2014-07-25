@@ -16,6 +16,7 @@ float Byte2float(uint8 msb, uint8 lsb);
 float Deg2Rad(float deg);
 void IntToString(char *str, int number);
 void FloatToString(char *str, float number);
+uint32 FloatToUint32(float value);
 int maxInt(int x, int y);
 
 //[] END OF FILE

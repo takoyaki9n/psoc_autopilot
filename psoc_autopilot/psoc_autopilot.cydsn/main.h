@@ -12,6 +12,7 @@
 #include <project.h>
 
 #define USB_EN
+#define UART_TIMEOUT 100e+3
 #define PWM_E_MAX 2000
 #define PWM_E_MIN 1000
 
@@ -25,5 +26,7 @@ enum { //pwm_e インデックス
 
 CY_ISR_PROTO(ISR_MAIN);
 CY_ISR_PROTO(ISR_SENSOR);
+
+int UARTWait(uint32 timeout);
 
 /* [] END OF FILE */
