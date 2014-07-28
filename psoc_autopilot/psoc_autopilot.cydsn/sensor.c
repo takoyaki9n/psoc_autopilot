@@ -73,9 +73,9 @@ void GetAccData(float *dat) {
 }
 void GetGyrData(float *dat) {
 	RegRead(MPU_SLAVE_ADDR, GYR_DATA_TOP_REG, 6);
-	dat[0] = Byte2float(I2Crxbuf[0], I2Crxbuf[1] - gyr_offset[0]) * GYR_SCALE;
-	dat[1] = Byte2float(I2Crxbuf[2], I2Crxbuf[4] - gyr_offset[1]) * GYR_SCALE;
-	dat[2] = Byte2float(I2Crxbuf[4], I2Crxbuf[5] - gyr_offset[2]) * GYR_SCALE;
+	dat[0] = Deg2Rad(Byte2float(I2Crxbuf[0], I2Crxbuf[1] - gyr_offset[0]) * GYR_SCALE);
+	dat[1] = Deg2Rad(Byte2float(I2Crxbuf[2], I2Crxbuf[4] - gyr_offset[1]) * GYR_SCALE);
+	dat[2] = Deg2Rad(Byte2float(I2Crxbuf[4], I2Crxbuf[5] - gyr_offset[2]) * GYR_SCALE);
 }
 void GetMagData(float *dat) {
 	RegRead(MAG_SLAVE_ADDR, MAG_DATA_TOP_REG, 6);
