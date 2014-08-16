@@ -9,6 +9,10 @@
 	* 簡易データシート&取説(https://strawberry-linux.com/pub/mpu-9150-manual.pdf)
 	* レジスタ・リファレンスマニュアル(https://strawberry-linux.com/pub/RM-MPU-9150A-00.pdf)
 
+## 設定
+### PSoC Creatorのインストール
+[トラ技の本](http://shop.cqpub.co.jp/hanbai/books/48/48221.html)の第１章参照。
+
 ## 注意
 ### 初期化の順番
 	void init(){
