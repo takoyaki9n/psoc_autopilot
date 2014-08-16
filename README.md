@@ -14,6 +14,7 @@
 [トラ技の本](http://shop.cqpub.co.jp/hanbai/books/48/48221.html)の第１章参照。
 ### MiniProg3の設定
 #### ドライバのインストール(Windows8のみ)
+以下の__Answer:__に書いてある手順に従う  
 http://japan.cypress.com/?app=forum&id=2232&rID=74548&source=shop
 
 ## 注意
