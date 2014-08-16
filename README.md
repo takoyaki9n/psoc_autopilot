@@ -9,9 +9,12 @@
 	* 簡易データシート&取説(https://strawberry-linux.com/pub/mpu-9150-manual.pdf)
 	* レジスタ・リファレンスマニュアル(https://strawberry-linux.com/pub/RM-MPU-9150A-00.pdf)
 
-## 設定
+## 設定方法
 ### PSoC Creatorのインストール
 [トラ技の本](http://shop.cqpub.co.jp/hanbai/books/48/48221.html)の第１章参照。
+### MiniProg3の設定
+#### ドライバのインストール(Windows8のみ)
+http://japan.cypress.com/?app=forum&id=2232&rID=74548&source=shop
 
 ## 注意
 ### 初期化の順番
