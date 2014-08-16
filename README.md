@@ -16,6 +16,14 @@
 #### ドライバのインストール(Windows8のみ)
 以下の__Answer:__に書いてある手順に従う  
 http://japan.cypress.com/?app=forum&id=2232&rID=74548&source=shop
+#### プログラムの書き込み
+Debug > Program などで「Select Debug Target」みたいなダイアログが出てきたら、MiniProg3を選択して「Port Setting」から以下のように設定する。
+
+* Active Protocol : SWD
+* Clock Speed : 1.6MHz
+* Power : 5.0V
+* Acquire Mode : Reset
+* Connector : 5 pin
 
 ## 注意
 ### 初期化の順番
