@@ -23,7 +23,7 @@ Debug > Program などで「Select Debug Target」みたいなダイアログが
 * Clock Speed : 1.6MHz
 * Power : 5.0V
 * Acquire Mode : Reset
-* Connector : 5 pin
+* Connector : 10 pin
 
 ## 注意
 ### 初期化の順番
