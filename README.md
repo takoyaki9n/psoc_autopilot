@@ -25,6 +25,9 @@ Debug > Program などで「Select Debug Target」みたいなダイアログが
 * Acquire Mode : Reset
 * Connector : 10 pin
 
+### USBUARTのドライバの設定(Windows8のみ)
+http://www.besttechnology.co.jp/modules/d3blog/details.php?bid=119
+
 ## 注意
 ### 初期化の順番
 	void init(){
