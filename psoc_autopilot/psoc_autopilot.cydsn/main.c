@@ -26,8 +26,8 @@ extern uint32 dt;
 
 CY_ISR(ISR_SENSOR){
 	updateSensors(acc_value, gyr_value, mag_value); // 2000 usec
-//	MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
-	MadgwickAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]); // 2000 usec
+	MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
+//	MadgwickAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]); // 2000 usec
 }
 
 CY_ISR(ISR_MAIN){
@@ -53,6 +53,7 @@ void initPWMs(){
 	PWM_Thr_Start();
 	PWM_Elv_Start();	
 	PWM_Rud_Start();	
+	PWM_Bag_Start();	
 }
 
 void init(){
@@ -99,8 +100,8 @@ int main(){
 		if (UARTWait(UART_TIMEOUT)){
 			USBUART_1_PutCRLF();
 		}
-		
-/*		if (UARTWait(UART_TIMEOUT)){
+/*		
+		if (UARTWait(UART_TIMEOUT)){
 			sprintf(str, "%d\r\n", (int) dt);
 			USBUART_1_PutString(str);
 		}

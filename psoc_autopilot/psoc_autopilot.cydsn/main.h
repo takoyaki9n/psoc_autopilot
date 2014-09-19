@@ -20,6 +20,7 @@ enum { //pwm_e インデックス
 	PWM_THR,
 	PWM_ELV,
 	PWM_RUD,
+	PWM_BAG,
 	
 	PWMS
 };

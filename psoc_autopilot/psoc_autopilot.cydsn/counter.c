@@ -27,6 +27,11 @@ CY_ISR(ISR_RUD){
 	//割り込みフラグクリア
 	Counter_Rud_ReadStatusRegister();
 }
+CY_ISR(ISR_BAG){
+	counter_value[COUNTER_BAG] = Counter_Bag_ReadCapture();
+	//割り込みフラグクリア
+	Counter_Bag_ReadStatusRegister();
+}
 
 void initCounters(){
 	int i;
@@ -36,11 +41,13 @@ void initCounters(){
 	Counter_Thr_Start();
 	Counter_Elv_Start();
 	Counter_Rud_Start();
+	Counter_Bag_Start();
 }
 
 void Counters_StartEx(){
 	ISR_Thr_StartEx(ISR_THR);
 	ISR_Elv_StartEx(ISR_ELV);
 	ISR_Rud_StartEx(ISR_RUD);
+	ISR_Rud_StartEx(ISR_BAG);
 }
 /* [] END OF FILE */

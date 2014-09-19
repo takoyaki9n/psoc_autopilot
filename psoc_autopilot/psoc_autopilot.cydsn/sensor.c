@@ -79,9 +79,9 @@ void GetGyrData(float *dat) {
 }
 void GetMagData(float *dat) {
 	RegRead(MAG_SLAVE_ADDR, MAG_DATA_TOP_REG, 6);
-	dat[0] = Byte2float(I2Crxbuf[1], I2Crxbuf[0]) * MAG_SCALE;
-	dat[1] = Byte2float(I2Crxbuf[3], I2Crxbuf[2]) * MAG_SCALE;
-	dat[2] = Byte2float(I2Crxbuf[5], I2Crxbuf[4]) * MAG_SCALE;
+	dat[1] = Byte2float(I2Crxbuf[1], I2Crxbuf[0]) * MAG_SCALE;
+	dat[0] = Byte2float(I2Crxbuf[3], I2Crxbuf[2]) * MAG_SCALE;
+	dat[2] = Byte2float(I2Crxbuf[5], I2Crxbuf[4]) * MAG_SCALE * -1.0f;
 }
 
 void initSensors() {
