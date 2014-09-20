@@ -16,6 +16,10 @@
 #define PWM_E_MAX 2000
 #define PWM_E_MIN 1000
 
+enum { //操縦モード
+	MODE_MANUAL,
+	MODE_STRAIGHT,
+};
 enum { //pwm_e インデックス
 	PWM_THR,
 	PWM_ELV,

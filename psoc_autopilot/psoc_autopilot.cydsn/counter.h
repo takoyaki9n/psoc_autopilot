@@ -12,11 +12,12 @@
 #include <project.h>
 
 enum { //counter_value インデックス
-	COUNTER_THR,
-	COUNTER_ELV,
-	COUNTER_RUD,
-	COUNTER_BAG,
-	
+	COUNTER_THR, //スロットル
+	COUNTER_ELV, //エレベーター
+	COUNTER_RUD, //ラダー
+	COUNTER_BAG, //お手玉
+	COUNTER_MOD, //モード切り替え
+
 	COUNTERS,
 };
 
@@ -27,6 +28,7 @@ CY_ISR_PROTO(ISR_THR);
 CY_ISR_PROTO(ISR_ELV);
 CY_ISR_PROTO(ISR_RUD);
 CY_ISR_PROTO(ISR_BAG);
+CY_ISR_PROTO(ISR_MOD);
 
 extern int16 counter_value[COUNTERS];
 /* [] END OF FILE */
