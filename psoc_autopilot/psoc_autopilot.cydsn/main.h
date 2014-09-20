@@ -21,12 +21,22 @@ enum { //操縦モード
 	MODE_STRAIGHT,
 };
 enum { //pwm_e インデックス
-	PWM_THR,
 	PWM_ELV,
 	PWM_RUD,
+	PWM_THR,
 	PWM_BAG,
 	
 	PWMS
+};
+enum { //K インデックス
+	GAIN_YAW_P,
+	GAIN_YAW_I,
+	GAIN_YAW_D,
+	GAIN_PITCH_P,
+	GAIN_PITCH_I,
+	GAIN_PITCH_D,
+	
+	GAINS
 };
 
 CY_ISR_PROTO(ISR_MAIN);
