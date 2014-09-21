@@ -57,7 +57,6 @@ CY_ISR(ISR_MAIN){
     } else {
         pilot_mode = MODE_MANUAL;
     }
-    pilot_mode = MODE_STRAIGHT;
     
     if (pilot_mode == MODE_MANUAL) {
     	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV];
