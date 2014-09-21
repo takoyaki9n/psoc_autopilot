@@ -54,7 +54,7 @@ void Counters_StartEx(){
 	ISR_Thr_StartEx(ISR_THR);
 	ISR_Elv_StartEx(ISR_ELV);
 	ISR_Rud_StartEx(ISR_RUD);
-//	ISR_Rud_StartEx(ISR_BAG);
-	ISR_Rud_StartEx(ISR_MOD);
+//	ISR_Bag_StartEx(ISR_BAG);
+	ISR_Mod_StartEx(ISR_MOD);
 }
 /* [] END OF FILE */
