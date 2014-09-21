@@ -57,6 +57,7 @@ CY_ISR(ISR_MAIN){
     } else {
         pilot_mode = MODE_MANUAL;
     }
+    pilot_mode = MODE_STRAIGHT;
     
     if (pilot_mode == MODE_MANUAL) {
     	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV];
@@ -115,7 +116,7 @@ void init(){
 	Init_LED_Out_Write(1);
     
     pilot_mode = MODE_MANUAL;
-    
+    initK();    
 	CyGlobalIntEnable;
 #ifdef USB_EN	
 	USBUART_1_Start(0, USBUART_1_DWR_VDDD_OPERATION);
@@ -142,11 +143,7 @@ int main(){
 		CyDelay(100);
 		Init_LED_Out_Write(1);
 #ifdef USB_EN
-		if (UARTWait(UART_TIMEOUT)){
-			sprintf(str, "pwm: %d, %d, %d\r\n", pwm_d[PWM_ELV], pwm_d[PWM_RUD], pwm_d[PWM_THR]);
-			USBUART_1_PutString(str);
-		}
-/*
+
         if (UARTWait(UART_TIMEOUT)){
 			qbuf[0] = q0; qbuf[1] = q1; qbuf[2] = q2; qbuf[3] = q3;
 			USBUART_1_PutData(qbuf, 16);
@@ -154,7 +151,7 @@ int main(){
 		if (UARTWait(UART_TIMEOUT)){
 			USBUART_1_PutCRLF();
 		}
-		
+/*		
 		if (UARTWait(UART_TIMEOUT)){
 			sprintf(str, "%d\r\n", (int) dt);
 			USBUART_1_PutString(str);
