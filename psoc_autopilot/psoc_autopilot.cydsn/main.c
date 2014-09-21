@@ -35,23 +35,20 @@ CY_ISR(ISR_MAIN){
 	int16 pwm_e[PWMS];
     float gyr[3];
 	float delta[PWMS-2];
-    float yaw, pitch;//, roll;
-    static float yawc;
+    float roll, pitch;//, roll;
 	int8 i;
     
 	for(i = 0; i < 3; i++){
         gyr[i] = gyr_value[i];
     }
-    yaw = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1); //psy
+//    yaw = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1); //psy
     pitch = -asin(2*(q1*q3 + q0*q2)); //theta
-//    roll = atan2(2*q2*q3 - 2*q0*q1, 2*q0*q0 + 2*q3*q3 - 1); //phi    
+    roll = atan2(2*q2*q3 - 2*q0*q1, 2*q0*q0 + 2*q3*q3 - 1); //phi    
 	
     if (counter_value[COUNTER_MOD] <= 1200) {
         pilot_mode = MODE_MANUAL;
     } else if (counter_value[COUNTER_MOD] <= 1700) {
         if (pilot_mode != MODE_STRAIGHT) {
-            //TODO highpass filter
-            yawc = yaw;
         }
         pilot_mode = MODE_STRAIGHT;
     } else {
@@ -63,9 +60,10 @@ CY_ISR(ISR_MAIN){
     	pwm_e[PWM_RUD] = counter_value[COUNTER_RUD];
     	pwm_e[PWM_THR] = counter_value[COUNTER_THR];
     } else if (pilot_mode == MODE_STRAIGHT) {
-#define PITCHC (-0.157)
+#define PITCHC (0.0)
+#define ROLLC  (0.0)
 		delta[PWM_ELV] = K[GAIN_PITCH_D] * gyr[1] + K[GAIN_PITCH_P] * (pitch - PITCHC);
-		delta[PWM_RUD] = K[GAIN_YAW_D  ] * gyr[2] + K[GAIN_YAW_P  ] * (yaw   - yawc  );
+		delta[PWM_RUD] = K[GAIN_ROLL_D ] * gyr[0] + K[GAIN_ROLL_P ] * (roll  - ROLLC );
     	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV] + delta[PWM_ELV];
     	pwm_e[PWM_RUD] = counter_value[COUNTER_RUD] + delta[PWM_ELV];
     	pwm_e[PWM_THR] = counter_value[COUNTER_THR];
@@ -86,12 +84,12 @@ CY_ISR(ISR_MAIN){
 }
 
 void initK(){
-	K[GAIN_YAW_P  ] = 100.0f;
-	K[GAIN_YAW_I  ] = 0.0f;
-	K[GAIN_YAW_D  ] = -12.0f;
 	K[GAIN_PITCH_P] = 100.0f;
 	K[GAIN_PITCH_I] = 0.0f;
 	K[GAIN_PITCH_D] = -6.0f;
+	K[GAIN_ROLL_P ] = 100.0f;
+	K[GAIN_ROLL_I ] = 0.0f;
+	K[GAIN_ROLL_D ] = -12.0f;
 }
 
 void initPWMs(){

@@ -46,7 +46,7 @@ void initCounters(){
 	Counter_Thr_Start();
 	Counter_Elv_Start();
 	Counter_Rud_Start();
-	Counter_Bag_Start();
+//	Counter_Bag_Start();
 	Counter_Mod_Start();
 }
 
@@ -54,7 +54,7 @@ void Counters_StartEx(){
 	ISR_Thr_StartEx(ISR_THR);
 	ISR_Elv_StartEx(ISR_ELV);
 	ISR_Rud_StartEx(ISR_RUD);
-	ISR_Rud_StartEx(ISR_BAG);
+//	ISR_Rud_StartEx(ISR_BAG);
 	ISR_Rud_StartEx(ISR_MOD);
 }
 /* [] END OF FILE */

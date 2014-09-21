@@ -11,7 +11,7 @@
 */
 #include <project.h>
 
-#define USB_EN
+//#define USB_EN
 #define UART_TIMEOUT 100e+3
 #define PWM_E_MAX 2000
 #define PWM_E_MIN 1000
@@ -29,12 +29,15 @@ enum { //pwm_e インデックス
 	PWMS
 };
 enum { //K インデックス
-	GAIN_YAW_P,
+/*	GAIN_YAW_P,
 	GAIN_YAW_I,
-	GAIN_YAW_D,
+	GAIN_YAW_D,*/
 	GAIN_PITCH_P,
 	GAIN_PITCH_I,
 	GAIN_PITCH_D,
+	GAIN_ROLL_P,
+	GAIN_ROLL_I,
+	GAIN_ROLL_D,
 	
 	GAINS
 };
