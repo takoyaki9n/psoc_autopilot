@@ -329,7 +329,7 @@
         <register>
           <name>Timer_Global_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x71</addressOffset>
+          <addressOffset>0x70</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -541,7 +541,7 @@
     <peripheral>
       <name>Counter_Mod</name>
       <description>No description available</description>
-      <baseAddress>0x6406</baseAddress>
+      <baseAddress>0x6402</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -1057,7 +1057,7 @@
     <peripheral>
       <name>Counter_Bag</name>
       <description>No description available</description>
-      <baseAddress>0x6408</baseAddress>
+      <baseAddress>0x6406</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -1281,7 +1281,7 @@
     <peripheral>
       <name>Counter_Thr</name>
       <description>No description available</description>
-      <baseAddress>0x6400</baseAddress>
+      <baseAddress>0x6404</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -2876,7 +2876,7 @@
     <peripheral>
       <name>Counter_Elv</name>
       <description>No description available</description>
-      <baseAddress>0x6402</baseAddress>
+      <baseAddress>0x6400</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>
@@ -3100,7 +3100,7 @@
     <peripheral>
       <name>Counter_Rud</name>
       <description>No description available</description>
-      <baseAddress>0x6404</baseAddress>
+      <baseAddress>0x6408</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x92</size>

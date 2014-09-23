@@ -17,7 +17,7 @@
 #include "common.h"
 #include "sensor.h"
 #include "counter.h"
-#include "MadgwickAHRS.h"
+#include "MahonyAHRS.h"
 
 int8 pilot_mode;
 float K[GAINS];
@@ -27,7 +27,8 @@ extern uint32 dt;
 
 CY_ISR(ISR_SENSOR){
 	updateSensors(acc_value, gyr_value, mag_value); // 2000 usec
-	MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
+	MahonyAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
+//  MadgwickAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
 //	MadgwickAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]); // 2000 usec
 }
 
@@ -57,6 +58,7 @@ CY_ISR(ISR_MAIN){
     } else {
         pilot_mode = MODE_MANUAL;
     }
+    pilot_mode = MODE_STRAIGHT;
     
     if (pilot_mode == MODE_MANUAL) {
     	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV];
