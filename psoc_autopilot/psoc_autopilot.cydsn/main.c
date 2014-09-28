@@ -22,31 +22,13 @@
 int8 pilot_mode;
 float K[GAINS];
 float acc_value[3], gyr_value[3], mag_value[3];
-float q_buf[Q_COUNT][4], q_ave[4];
-int8 q_i;
 int16 counter_value[COUNTERS];
 
 CY_ISR(ISR_SENSOR){
-    int8 i, j;
-    float recipNorm;
-    
 	updateSensors(acc_value, gyr_value, mag_value); // 2000 usec
     
-	MahonyAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
-    
-    q_buf[q_i][0] = q0; q_buf[q_i][1] = q1; q_buf[q_i][2] = q2; q_buf[q_i][3] = q3;
-    q_ave[0] = 0; q_ave[1] = 0; q_ave[2] = 0; q_ave[3] = 0;
-    for (i = 0; i < Q_COUNT; i++) {
-        for (j = 0; j < 4; j++) {
-            q_ave[j] += q_buf[i][j];
-        }
-    }
-    recipNorm = invSqrt(q_ave[0]*q_ave[0] + q_ave[1]*q_ave[1] + q_ave[2]*q_ave[2] + q_ave[3]*q_ave[3]);
-    for (j = 0; j < 4; j++) {
-        q_ave[j] *= recipNorm;
-    }
-
-    q_i = (q_i + 1) % Q_COUNT;
+//	MahonyAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
+	MahonyAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]);
 }
 
 CY_ISR(ISR_MAIN){
@@ -64,8 +46,8 @@ CY_ISR(ISR_MAIN){
 //    y = -asin(2*(q1*q3 + q0*q2)); //theta
 //    z = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1); //psy
     //センサーが横向きに取り付けてあるので
-    roll  = atan2(2*q_ave[2]*q_ave[3] - 2*q_ave[0]*q_ave[1], 2*q_ave[0]*q_ave[0] + 2*q_ave[3]*q_ave[3] - 1); //phi
-    pitch = -asin(2*(q_ave[1]*q_ave[3] + q_ave[0]*q_ave[2])); //theta
+    roll  = atan2(2*q2*q3 - 2*q0*q1, 2*q0*q0 + 2*q3*q3 - 1); //phi
+    pitch = -asin(2*(q1*q3 + q0*q2)); //theta
 	
     if (counter_value[COUNTER_MOD] <= 1200) {
         pilot_mode = MODE_MANUAL;
@@ -138,15 +120,6 @@ void init(){
     //モード初期化
     pilot_mode = MODE_MANUAL;
     
-    //q初期化
-    q_i = 0;
-    q_ave[0] = q0; q_ave[1] = q1; q_ave[2] = q2; q_ave[3] = q3;
-    for (i = 0; i < Q_COUNT; i++) {
-        for (j = 0; j < 4; j++) {
-            q_buf[i][j] = q_ave[j];
-        }
-    }
-    
     initK();    
 	CyGlobalIntEnable;
 #ifdef USB_EN	
@@ -176,8 +149,7 @@ int main(){
 		Init_LED_Out_Write(1);
 
         if (UARTWait(UART_TIMEOUT)){
-//			qtmp[0] = q0; qtmp[1] = q1; qtmp[2] = q2; qtmp[3] = q3;
-			qtmp[0] = q_ave[0]; qtmp[1] = q_ave[1]; qtmp[2] = q_ave[2]; qtmp[3] = q_ave[3];
+			qtmp[0] = q0; qtmp[1] = q1; qtmp[2] = q2; qtmp[3] = q3;
 			USBUART_1_PutData(qtmp, 16);
 		}
 		if (UARTWait(UART_TIMEOUT)){

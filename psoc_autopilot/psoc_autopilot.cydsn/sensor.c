@@ -97,6 +97,8 @@ void initSensors() {
     RegWrite(MPU_SLAVE_ADDR, ACC_CONFIG_REG, ACC_CONFIG_DAT);
     RegWrite(MPU_SLAVE_ADDR, GYR_CONFIG_REG, GYR_CONFIG_DAT);
 
+	UpdateMag();
+    
 	for(i = 0; i < 3; i++) {
 		gyr_offset[i] = 0;
 	}
