@@ -25,10 +25,9 @@ float acc_value[3], gyr_value[3], mag_value[3];
 int16 counter_value[COUNTERS];
 
 CY_ISR(ISR_SENSOR){
-	updateSensors(acc_value, gyr_value, mag_value); // 2000 usec
-    
-//	MahonyAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
-	MahonyAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]);
+	updateSensors(acc_value, gyr_value, mag_value); // 2000 usec    
+    MahonyAHRSupdate(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2], mag_value[0], mag_value[1], mag_value[2]); // 5000 usec
+//	MahonyAHRSupdateIMU(gyr_value[0], gyr_value[1], gyr_value[2], acc_value[0], acc_value[1], acc_value[2]);
 }
 
 CY_ISR(ISR_MAIN){
