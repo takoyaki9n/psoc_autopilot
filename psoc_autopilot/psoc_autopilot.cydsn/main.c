@@ -45,8 +45,8 @@ CY_ISR(ISR_MAIN){
 //    y = -asin(2*(q1*q3 + q0*q2)); //theta
 //    z = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1); //psy
     //センサーが横向きに取り付けてあるので
-    pitch = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1); //psy
     roll  = atan2(2*q2*q3 - 2*q0*q1, 2*q0*q0 + 2*q3*q3 - 1); //phi
+    pitch = -asin(2*(q1*q3 + q0*q2)); //theta
 	
     if (counter_value[COUNTER_MOD] <= 1200) {
         pilot_mode = MODE_MANUAL;
@@ -67,8 +67,8 @@ CY_ISR(ISR_MAIN){
     } else if (pilot_mode == MODE_STRAIGHT) {
 #define PITCHC (0.0)
 #define ROLLC  (0.0)
-		delta[PWM_ELV] = K[GAIN_PITCH_D] * gyr[1] + K[GAIN_PITCH_P] * (pitch - PITCHC);
-		delta[PWM_RUD] = K[GAIN_ROLL_D ] * gyr[0] + K[GAIN_ROLL_P ] * (roll  - ROLLC );
+		delta[PWM_ELV] = /*K[GAIN_PITCH_D] * gyr[2] +*/ K[GAIN_PITCH_P] * (pitch - PITCHC);
+		delta[PWM_RUD] = /*K[GAIN_ROLL_D ] * gyr[0] +*/ K[GAIN_ROLL_P ] * (roll  - ROLLC );
     	pwm_e[PWM_ELV] = counter_value[COUNTER_ELV] + delta[PWM_ELV];
         pwm_e[PWM_RUD] = counter_value[COUNTER_RUD] + delta[PWM_RUD];
         pwm_e[PWM_THR] = counter_value[COUNTER_THR];
@@ -141,9 +141,9 @@ int main(){
 	init();
 	
 	for(;;){
+#ifdef USB_EN
 		CyDelay(100);
 		Init_LED_Out_Write(1);
-#ifdef USB_EN
 
         if (UARTWait(UART_TIMEOUT)){
 			qbuf[0] = q0; qbuf[1] = q1; qbuf[2] = q2; qbuf[3] = q3;
@@ -173,8 +173,8 @@ int main(){
 			sprintf(str, "ang: %f, %f, %f\r\n\r\n", psy, phi, theta);
 			USBUART_1_PutString(str);
 		}*/
-#endif
 		Init_LED_Out_Write(0);
+#endif
     }
 }
 
